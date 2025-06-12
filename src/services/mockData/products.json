@@ -1,0 +1,127 @@
+[
+  {
+    "id": "1",
+    "name": "Precision Bearing Housing",
+    "category": "precision-parts",
+    "description": "High-precision bearing housing machined from 6061-T6 aluminum with tight tolerances for aerospace applications. Features integrated cooling channels and multiple mounting configurations.",
+    "specifications": {
+      "Material": "6061-T6 Aluminum",
+      "Tolerance": "±0.0005\"",
+      "Surface Finish": "32 Ra max",
+      "Dimensions": "4.5\" x 3.2\" x 2.1\"",
+      "Weight": "1.2 lbs",
+      "Operating Temp": "-65°F to +200°F"
+    },
+    "images": [
+      "/images/bearing-housing-1.jpg",
+      "/images/bearing-housing-2.jpg"
+    ],
+    "materials": [
+      "6061-T6 Aluminum construction",
+      "Anodized Type II finish available",
+      "Integrated cooling channels",
+      "Multiple bolt patterns",
+      "Thread locking inserts"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Custom Valve Body Assembly",
+    "category": "assemblies",
+    "description": "Complete valve body assembly featuring precision-machined components with integrated sealing surfaces. Designed for high-pressure hydraulic systems with leak-proof performance.",
+    "specifications": {
+      "Material": "17-4 PH Stainless Steel",
+      "Pressure Rating": "5000 PSI",
+      "Port Size": "1/2\" NPT",
+      "Flow Rate": "25 GPM max",
+      "Weight": "3.8 lbs",
+      "Finish": "Passivated"
+    },
+    "images": [
+      "/images/valve-body-1.jpg",
+      "/images/valve-body-2.jpg"
+    ],
+    "materials": [
+      "17-4 PH stainless steel body",
+      "Viton O-ring seals",
+      "Hardened steel seats",
+      "Precision ground surfaces",
+      "Leak-tested to 6000 PSI"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Automotive Suspension Component",
+    "category": "components",
+    "description": "Forged and machined suspension component designed for high-performance automotive applications. Features optimized geometry for weight reduction while maintaining structural integrity.",
+    "specifications": {
+      "Material": "7075-T6 Aluminum",
+      "Load Capacity": "2500 lbs",
+      "Safety Factor": "4:1",
+      "Dimensions": "12\" x 6\" x 4\"",
+      "Weight": "2.1 lbs",
+      "Finish": "Hard Anodized"
+    },
+    "images": [
+      "/images/suspension-component-1.jpg",
+      "/images/suspension-component-2.jpg"
+    ],
+    "materials": [
+      "7075-T6 aluminum forging",
+      "CNC machined to final dimensions",
+      "Hard anodized Type III coating",
+      "Stress-relieved for stability",
+      "NDT inspected for defects"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Industrial Pump Housing",
+    "category": "precision-parts",
+    "description": "Heavy-duty pump housing designed for industrial fluid handling applications. Features corrosion-resistant materials and precision-machined sealing surfaces for reliable operation.",
+    "specifications": {
+      "Material": "316L Stainless Steel",
+      "Pressure Rating": "1500 PSI",
+      "Temperature Range": "-40°F to +400°F",
+      "Inlet/Outlet": "4\" ANSI Flanged",
+      "Weight": "28 lbs",
+      "Finish": "Electropolished"
+    },
+    "images": [
+      "/images/pump-housing-1.jpg",
+      "/images/pump-housing-2.jpg"
+    ],
+    "materials": [
+      "316L stainless steel construction",
+      "Electropolished interior surfaces",
+      "ANSI B16.5 flange connections",
+      "Precision-machined seal grooves",
+      "Hydrostatic pressure tested"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Medical Device Enclosure",
+    "category": "custom",
+    "description": "Custom-designed enclosure for medical instrumentation requiring FDA compliance. Features antimicrobial coating and EMI shielding for sensitive electronic components.",
+    "specifications": {
+      "Material": "6061-T6 Aluminum",
+      "Dimensions": "8\" x 6\" x 3\"",
+      "EMI Shielding": "60 dB @ 1 GHz",
+      "IP Rating": "IP65",
+      "Weight": "1.8 lbs",
+      "Certification": "FDA 510(k) Ready"
+    },
+    "images": [
+      "/images/medical-enclosure-1.jpg",
+      "/images/medical-enclosure-2.jpg"
+    ],
+    "materials": [
+      "Medical-grade aluminum alloy",
+      "Antimicrobial powder coating",
+      "Conductive EMI gaskets",
+      "Stainless steel hardware",
+      "FDA-compliant materials only"
+    ]
+  }
+]

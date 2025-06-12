@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Johnson",
+    "email": "s.johnson@techcorp.com",
+    "company": "TechCorp Manufacturing",
+    "phone": "(555) 123-4567",
+    "message": "We're looking for a manufacturing partner for our new product line. Need someone with aerospace certifications and high-volume capabilities. Would like to schedule a facility tour.",
+    "submittedAt": "2024-01-18T11:20:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Michael Chen",
+    "email": "m.chen@autoparts.com",
+    "company": "AutoParts Plus",
+    "phone": "(555) 987-6543",
+    "message": "Interested in your automotive manufacturing capabilities. We have a potential contract for suspension components that would require IATF 16949 certification. Please contact me to discuss volumes and pricing.",
+    "submittedAt": "2024-01-17T16:45:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Jennifer Lee",
+    "email": "j.lee@meddevice.com",
+    "company": "Medical Device Solutions",
+    "phone": "(555) 456-7890",
+    "message": "We need a manufacturing partner for FDA-regulated medical device components. Quality and traceability are critical. Do you have experience with medical device manufacturing and FDA compliance?",
+    "submittedAt": "2024-01-16T13:30:00Z"
+  }
+]

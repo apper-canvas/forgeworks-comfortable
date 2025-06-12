@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "name": "ISO 9001:2015",
+    "issuer": "International Organization for Standardization",
+    "logo": "/certifications/iso-9001.png",
+    "validUntil": "2025-12-31",
+    "description": "Quality Management Systems standard ensuring consistent quality and customer satisfaction through systematic approach to quality management.",
+    "scope": "Design, development, and manufacture of precision machined components and assemblies",
+    "certificationBody": "BSI Group",
+    "certificateNumber": "FM 12345"
+  },
+  {
+    "id": "2",
+    "name": "AS9100D",
+    "issuer": "Aerospace Quality Management",
+    "logo": "/certifications/as9100d.png",
+    "validUntil": "2025-08-15",
+    "description": "Aerospace quality management system standard built on ISO 9001 with additional aerospace industry requirements.",
+    "scope": "Manufacturing of aerospace components and assemblies",
+    "certificationBody": "NQA Global",
+    "certificateNumber": "AS 67890"
+  },
+  {
+    "id": "3",
+    "name": "ISO 14001",
+    "issuer": "Environmental Management",
+    "logo": "/certifications/iso-14001.png",
+    "validUntil": "2025-06-30",
+    "description": "Environmental Management Systems standard for organizations committed to reducing their environmental impact.",
+    "scope": "Manufacturing operations and facility management",
+    "certificationBody": "LRQA",
+    "certificateNumber": "EMS 24680"
+  },
+  {
+    "id": "4",
+    "name": "IATF 16949",
+    "issuer": "Automotive Quality",
+    "logo": "/certifications/iatf-16949.png",
+    "validUntil": "2025-11-15",
+    "description": "Automotive Quality Management System standard specifically for the automotive industry supply chain.",
+    "scope": "Manufacturing of automotive components and systems",
+    "certificationBody": "TUV Rheinland",
+    "certificateNumber": "AUTO 13579"
+  }
+]

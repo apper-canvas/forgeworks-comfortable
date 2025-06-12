@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "customerName": "John Peterson",
+    "company": "Aerospace Dynamics Corp",
+    "email": "j.peterson@aerodynamics.com",
+    "phone": "(555) 234-5678",
+    "projectName": "Landing Gear Component Production",
+    "timeline": "3-4weeks",
+    "budget": "25k-100k",
+    "products": [
+      {
+        "productId": "1",
+        "quantity": "250 pieces",
+        "specifications": "Modified for landing gear application"
+      }
+    ],
+    "requirements": "Need precision bearing housings modified for aircraft landing gear systems. Require AS9100D certification and first article inspection. Materials must be traceable with full documentation package.",
+    "certifications": ["AS9100D", "First Article Inspection (FAI)", "Material Certifications"],
+    "deliveryAddress": "1500 Airport Blvd, Aerospace Park, CA 90210",
+    "specialInstructions": "Parts must be individually packaged and labeled with serial numbers",
+    "status": "pending",
+    "submittedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "customerName": "Maria Rodriguez",
+    "company": "Industrial Systems Inc",
+    "email": "m.rodriguez@indsystems.com",
+    "phone": "(555) 345-6789",
+    "projectName": "Hydraulic System Upgrade",
+    "timeline": "1-2months",
+    "budget": "5k-25k",
+    "products": [
+      {
+        "productId": "2",
+        "quantity": "12 assemblies",
+        "specifications": "Pressure rating upgraded to 6000 PSI"
+      }
+    ],
+    "requirements": "Custom valve body assemblies for hydraulic system upgrade. Need higher pressure rating than standard. Include installation hardware and assembly instructions.",
+    "certifications": ["ISO 9001:2015", "Dimensional Reports"],
+    "deliveryAddress": "",
+    "specialInstructions": "Coordinate delivery with plant shutdown schedule",
+    "status": "quoted",
+    "submittedAt": "2024-01-12T14:15:00Z"
+  },
+  {
+    "id": "3",
+    "customerName": "David Kim",
+    "company": "Performance Auto Works",
+    "email": "d.kim@performanceauto.com",
+    "phone": "(555) 456-7890",
+    "projectName": "Racing Suspension Components",
+    "timeline": "asap",
+    "budget": "under-5k",
+    "products": [
+      {
+        "productId": "3",
+        "quantity": "4 pieces",
+        "specifications": "Lightweight racing configuration"
+      }
+    ],
+    "requirements": "Need suspension components for racing application. Weight is critical - looking for maximum weight reduction while maintaining safety factors. Rush delivery needed for upcoming race season.",
+    "certifications": ["Dimensional Reports"],
+    "deliveryAddress": "2200 Speedway Drive, Racing Complex, TX 75001",
+    "specialInstructions": "Rush order - willing to pay expedite fees",
+    "status": "in-production",
+    "submittedAt": "2024-01-10T09:45:00Z"
+  }
+]
