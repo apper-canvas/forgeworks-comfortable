@@ -84,20 +84,7 @@ function Layout() {
                   Logout
                 </button>
               </div>
-            )}
-
-            {/* Mobile menu button */}
-
-            {/* CTA Button */}
-{/* CTA Button */}
-            <div className="hidden md:block">
-              <NavLink
-                to="/quote"
-                className="cta-gradient text-white px-4 py-2 rounded-md text-sm font-medium hover:scale-105 transition-transform duration-200"
-              >
-                Get Quote
-              </NavLink>
-            </div>
+)}
 
             {/* Mobile Menu Button */}
             <button
@@ -109,7 +96,6 @@ function Layout() {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
 {isMobileMenuOpen && (
@@ -143,17 +129,8 @@ function Layout() {
                       }
                     >
                       {route.label}
-                    </NavLink>
+</NavLink>
                   ))}
-                  <div className="pt-4 border-t border-gray-200">
-                    <NavLink
-                      to="/quote"
-                      onClick={toggleMobileMenu}
-                      className="block w-full cta-gradient text-white px-4 py-2 rounded-md text-center font-medium"
-                    >
-                      Get Quote
-                    </NavLink>
-                  </div>
                 </div>
               </motion.div>
             </>
