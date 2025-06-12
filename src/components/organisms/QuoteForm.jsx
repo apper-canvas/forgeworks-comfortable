@@ -215,57 +215,57 @@ const QuoteForm = () => {
     }
   };
 
-  return (
-    &lt;&gt;
-      &lt;section className="py-8 bg-surface border-b border-gray-200 sticky top-16 z-30"&gt;
-        &lt;div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"&gt;
-          &lt;div className="flex items-center justify-between"&gt;
+return (
+    <>
+      <section className="py-8 bg-surface border-b border-gray-200 sticky top-16 z-30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
             {steps.map((step, index) => (
-              &lt;ProgressStepItem 
+              <ProgressStepItem 
                 key={step.id} 
                 step={step} 
                 currentStep={currentStep} 
                 index={index} 
                 totalSteps={steps.length} 
-              /&gt;
+              />
             ))}
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
+          </div>
+        </div>
+      </section>
 
-      &lt;section className="py-16"&gt;
-        &lt;div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"&gt;
-          &lt;form onSubmit={handleSubmit}&gt;
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <form onSubmit={handleSubmit}>
             {currentStep === 1 && (
-              &lt;motion.div
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
-              &gt;
-                &lt;div className="text-center mb-8"&gt;
-                  &lt;Heading as="h2" className="text-3xl text-primary mb-2"&gt;Contact Information&lt;/Heading&gt;
-                  &lt;Text as="p" className="text-gray-600"&gt;Tell us about yourself and your company&lt;/Text&gt;
-                &lt;/div&gt;
+              >
+                <div className="text-center mb-8">
+                  <Heading as="h2" className="text-3xl text-primary mb-2">Contact Information</Heading>
+                  <Text as="p" className="text-gray-600">Tell us about yourself and your company</Text>
+                </div>
 
-                &lt;div className="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;
-                  &lt;FormField
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
                     label="Full Name *"
                     name="customerName"
                     value={formData.customerName}
                     onChange={handleInputChange}
                     placeholder="John Smith"
                     error={errors.customerName}
-                  /&gt;
-                  &lt;FormField
+                  />
+                  <FormField
                     label="Company *"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
                     placeholder="Your Company Name"
                     error={errors.company}
-                  /&gt;
-                  &lt;FormField
+                  />
+                  <FormField
                     label="Email Address *"
                     type="email"
                     name="email"
@@ -273,42 +273,42 @@ const QuoteForm = () => {
                     onChange={handleInputChange}
                     placeholder="john@company.com"
                     error={errors.email}
-                  /&gt;
-                  &lt;FormField
+                  />
+                  <FormField
                     label="Phone Number"
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="(555) 123-4567"
-                  /&gt;
-                &lt;/div&gt;
-              &lt;/motion.div&gt;
+                  />
+                </div>
+              </motion.div>
             )}
 
             {currentStep === 2 && (
-              &lt;motion.div
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
-              &gt;
-                &lt;div className="text-center mb-8"&gt;
-                  &lt;Heading as="h2" className="text-3xl text-primary mb-2"&gt;Project Details&lt;/Heading&gt;
-                  &lt;Text as="p" className="text-gray-600"&gt;Provide information about your project&lt;/Text&gt;
-                &lt;/div&gt;
+              >
+                <div className="text-center mb-8">
+                  <Heading as="h2" className="text-3xl text-primary mb-2">Project Details</Heading>
+                  <Text as="p" className="text-gray-600">Provide information about your project</Text>
+                </div>
 
-                &lt;FormField
+                <FormField
                   label="Project Name *"
                   name="projectName"
                   value={formData.projectName}
                   onChange={handleInputChange}
                   placeholder="Describe your project in a few words"
                   error={errors.projectName}
-                /&gt;
+                />
 
-                &lt;div className="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;
-                  &lt;FormField
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
                     label="Timeline *"
                     type="select"
                     name="timeline"
@@ -317,8 +317,8 @@ const QuoteForm = () => {
                     options={timelineOptions}
                     placeholder="Select timeline"
                     error={errors.timeline}
-                  /&gt;
-                  &lt;FormField
+                  />
+                  <FormField
                     label="Budget Range"
                     type="select"
                     name="budget"
@@ -326,10 +326,10 @@ const QuoteForm = () => {
                     onChange={handleInputChange}
                     options={budgetRanges}
                     placeholder="Select budget range"
-                  /&gt;
-                &lt;/div&gt;
+                  />
+                </div>
 
-                &lt;FormField
+                <FormField
                   label="Delivery Address"
                   type="textarea"
                   name="deliveryAddress"
@@ -337,107 +337,107 @@ const QuoteForm = () => {
                   onChange={handleInputChange}
                   rows={3}
                   placeholder="Delivery address (if different from company address)"
-                /&gt;
-              &lt;/motion.div&gt;
+                />
+              </motion.div>
             )}
 
             {currentStep === 3 && (
-              &lt;motion.div
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
-              &gt;
-                &lt;div className="text-center mb-8"&gt;
-                  &lt;Heading as="h2" className="text-3xl text-primary mb-2"&gt;Requirements&lt;/Heading&gt;
-                  &lt;Text as="p" className="text-gray-600"&gt;Specify your product and service requirements&lt;/Text&gt;
-                &lt;/div&gt;
+              >
+                <div className="text-center mb-8">
+                  <Heading as="h2" className="text-3xl text-primary mb-2">Requirements</Heading>
+                  <Text as="p" className="text-gray-600">Specify your product and service requirements</Text>
+                </div>
 
                 {/* Products */}
-                &lt;div&gt;
-                  &lt;div className="flex items-center justify-between mb-4"&gt;
-                    &lt;label className="block text-sm font-medium text-gray-700"&gt;
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <label className="block text-sm font-medium text-gray-700">
                       Products Required *
-                    &lt;/label&gt;
-                    &lt;Button
+                    </label>
+                    <Button
                       type="button"
                       onClick={addProduct}
                       className="text-accent hover:text-accent/80 font-medium text-sm !p-0 !py-0 !px-0"
                       iconName="Plus"
-                    &gt;
+                    >
                       Add Product
-                    &lt;/Button&gt;
-                  &lt;/div&gt;
+                    </Button>
+                  </div>
 
-                  &lt;div className="space-y-4"&gt;
+                  <div className="space-y-4">
                     {formData.products.map((product, index) => (
-                      &lt;div key={index} className="bg-surface p-4 rounded-lg"&gt;
-                        &lt;div className="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;
-                          &lt;div&gt;
-                            &lt;label className="block text-xs font-medium text-gray-600 mb-1"&gt;
+                      <div key={index} className="bg-surface p-4 rounded-lg">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">
                               Product/Service
-                            &lt;/label&gt;
-                            &lt;select
+                            </label>
+                            <select
                               value={product.productId}
                               onChange={(e) => handleProductChange(index, 'productId', e.target.value)}
                               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm"
-                            &gt;
-                              &lt;option value=""&gt;Select product&lt;/option&gt;
+                            >
+                              <option value="">Select product</option>
                               {products.map(prod => (
-                                &lt;option key={prod.id} value={prod.id}&gt;
+                                <option key={prod.id} value={prod.id}>
                                   {prod.name}
-                                &lt;/option&gt;
+                                </option>
                               ))}
-                              &lt;option value="custom"&gt;Custom/Other&lt;/option&gt;
-                            &lt;/select&gt;
-                          &lt;/div&gt;
+                              <option value="custom">Custom/Other</option>
+                            </select>
+                          </div>
 
-                          &lt;div&gt;
-                            &lt;label className="block text-xs font-medium text-gray-600 mb-1"&gt;
+                          <div>
+                            <label className="block text-xs font-medium text-gray-600 mb-1">
                               Quantity
-                            &lt;/label&gt;
-                            &lt;input
+                            </label>
+                            <input
                               type="text"
                               value={product.quantity}
                               onChange={(e) => handleProductChange(index, 'quantity', e.target.value)}
                               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm"
                               placeholder="e.g., 100 pcs"
-                            /&gt;
-                          &lt;/div&gt;
+                            />
+                          </div>
 
-                          &lt;div className="relative"&gt;
-                            &lt;label className="block text-xs font-medium text-gray-600 mb-1"&gt;
+                          <div className="relative">
+                            <label className="block text-xs font-medium text-gray-600 mb-1">
                               Specifications
-                            &lt;/label&gt;
-                            &lt;div className="flex"&gt;
-                              &lt;input
+                            </label>
+                            <div className="flex">
+                              <input
                                 type="text"
                                 value={product.specifications}
                                 onChange={(e) => handleProductChange(index, 'specifications', e.target.value)}
                                 className="flex-1 px-3 py-2 border border-gray-300 rounded-l focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-sm"
                                 placeholder="Brief specs"
-                              /&gt;
-                              {index &gt; 0 && (
-                                &lt;Button
+                              />
+                              {index > 0 && (
+                                <Button
                                   type="button"
                                   onClick={() => removeProduct(index)}
                                   className="px-2 py-2 bg-error text-white rounded-r hover:bg-error/80 transition-colors !p-2 !py-2 !px-2"
                                   iconName="X"
-                                &gt;&lt;/Button&gt;
+                                ></Button>
                               )}
-                            &lt;/div&gt;
-                          &lt;/div&gt;
-                        &lt;/div&gt;
-                      &lt;/div&gt;
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     ))}
-                  &lt;/div&gt;
+                  </div>
                   {errors.products && (
-                    &lt;Text as="p" className="mt-1 text-sm text-error"&gt;{errors.products}&lt;/Text&gt;
+                    <Text as="p" className="mt-1 text-sm text-error">{errors.products}</Text>
                   )}
-                &lt;/div&gt;
+                </div>
 
                 {/* Requirements */}
-                &lt;FormField
+                <FormField
                   label="Detailed Requirements *"
                   type="textarea"
                   name="requirements"
@@ -451,30 +451,30 @@ const QuoteForm = () => {
 • Any special processing requirements
 • Quantity requirements and delivery schedule"
                   error={errors.requirements}
-                /&gt;
+                />
 
                 {/* Certifications */}
-                &lt;div&gt;
-                  &lt;label className="block text-sm font-medium text-gray-700 mb-3"&gt;
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
                     Required Certifications
-                  &lt;/label&gt;
-                  &lt;div className="grid grid-cols-2 md:grid-cols-3 gap-3"&gt;
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {certificationOptions.map(cert => (
-                      &lt;label key={cert} className="flex items-center"&gt;
-                        &lt;input
+                      <label key={cert} className="flex items-center">
+                        <input
                           type="checkbox"
                           checked={formData.certifications.includes(cert)}
                           onChange={() => handleCertificationChange(cert)}
                           className="mr-2 rounded text-accent focus:ring-accent"
-                        /&gt;
-                        &lt;Text as="span" className="text-sm text-gray-700"&gt;{cert}&lt;/Text&gt;
-                      &lt;/label&gt;
+                        />
+                        <Text as="span" className="text-sm text-gray-700">{cert}</Text>
+                      </label>
                     ))}
-                  &lt;/div&gt;
-                &lt;/div&gt;
+                  </div>
+                </div>
 
                 {/* Special Instructions */}
-                &lt;FormField
+                <FormField
                   label="Special Instructions"
                   type="textarea"
                   name="specialInstructions"
@@ -482,126 +482,126 @@ const QuoteForm = () => {
                   onChange={handleInputChange}
                   rows={3}
                   placeholder="Any special handling, packaging, or delivery instructions..."
-                /&gt;
-              &lt;/motion.div&gt;
+                />
+              </motion.div>
             )}
 
             {currentStep === 4 && (
-              &lt;motion.div
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
-              &gt;
-                &lt;div className="text-center mb-8"&gt;
-                  &lt;Heading as="h2" className="text-3xl text-primary mb-2"&gt;Review & Submit&lt;/Heading&gt;
-                  &lt;Text as="p" className="text-gray-600"&gt;Please review your information before submitting&lt;/Text&gt;
-                &lt;/div&gt;
+              >
+                <div className="text-center mb-8">
+                  <Heading as="h2" className="text-3xl text-primary mb-2">Review & Submit</Heading>
+                  <Text as="p" className="text-gray-600">Please review your information before submitting</Text>
+                </div>
 
-                &lt;div className="bg-surface p-6 rounded-lg space-y-6"&gt;
+                <div className="bg-surface p-6 rounded-lg space-y-6">
                   {/* Contact Info */}
-                  &lt;div&gt;
-                    &lt;Heading as="h3" className="text-lg text-primary mb-3 font-semibold"&gt;Contact Information&lt;/Heading&gt;
-                    &lt;div className="grid grid-cols-2 gap-4 text-sm"&gt;
-                      &lt;div&gt;&lt;strong&gt;Name:&lt;/strong&gt; {formData.customerName}&lt;/div&gt;
-                      &lt;div&gt;&lt;strong&gt;Company:&lt;/strong&gt; {formData.company}&lt;/div&gt;
-                      &lt;div&gt;&lt;strong&gt;Email:&lt;/strong&gt; {formData.email}&lt;/div&gt;
-                      &lt;div&gt;&lt;strong&gt;Phone:&lt;/strong&gt; {formData.phone || 'Not provided'}&lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
+                  <div>
+                    <Heading as="h3" className="text-lg text-primary mb-3 font-semibold">Contact Information</Heading>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div><strong>Name:</strong> {formData.customerName}</div>
+                      <div><strong>Company:</strong> {formData.company}</div>
+                      <div><strong>Email:</strong> {formData.email}</div>
+                      <div><strong>Phone:</strong> {formData.phone || 'Not provided'}</div>
+                    </div>
+                  </div>
 
                   {/* Project Details */}
-                  &lt;div&gt;
-                    &lt;Heading as="h3" className="text-lg text-primary mb-3 font-semibold"&gt;Project Details&lt;/Heading&gt;
-                    &lt;div className="grid grid-cols-2 gap-4 text-sm"&gt;
-                      &lt;div&gt;&lt;strong&gt;Project:&lt;/strong&gt; {formData.projectName}&lt;/div&gt;
-                      &lt;div&gt;&lt;strong&gt;Timeline:&lt;/strong&gt; {timelineOptions.find(t => t.value === formData.timeline)?.label}&lt;/div&gt;
-                      &lt;div&gt;&lt;strong&gt;Budget:&lt;/strong&gt; {budgetRanges.find(b => b.value === formData.budget)?.label || 'Not specified'}&lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
+                  <div>
+                    <Heading as="h3" className="text-lg text-primary mb-3 font-semibold">Project Details</Heading>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div><strong>Project:</strong> {formData.projectName}</div>
+                      <div><strong>Timeline:</strong> {timelineOptions.find(t => t.value === formData.timeline)?.label}</div>
+                      <div><strong>Budget:</strong> {budgetRanges.find(b => b.value === formData.budget)?.label || 'Not specified'}</div>
+                    </div>
+                  </div>
 
                   {/* Products */}
-                  &lt;div&gt;
-                    &lt;Heading as="h3" className="text-lg text-primary mb-3 font-semibold"&gt;Products Required&lt;/Heading&gt;
+                  <div>
+                    <Heading as="h3" className="text-lg text-primary mb-3 font-semibold">Products Required</Heading>
                     {formData.products.map((product, index) => (
-                      &lt;div key={index} className="mb-2 text-sm"&gt;
-                        &lt;strong&gt;Product {index + 1}:&lt;/strong&gt; {
+                      <div key={index} className="mb-2 text-sm">
+                        <strong>Product {index + 1}:</strong> {
                           product.productId === 'custom' ? 'Custom/Other' : 
                           products.find(p => p.id === product.productId)?.name || 'Not selected'
                         } - Qty: {product.quantity} - {product.specifications}
-                      &lt;/div&gt;
+                      </div>
                     ))}
-                  &lt;/div&gt;
+                  </div>
 
                   {/* Requirements */}
-                  &lt;div&gt;
-                    &lt;Heading as="h3" className="text-lg text-primary mb-3 font-semibold"&gt;Requirements&lt;/Heading&gt;
-                    &lt;Text as="p" className="text-sm text-gray-700 whitespace-pre-wrap"&gt;{formData.requirements}&lt;/Text&gt;
-                  &lt;/div&gt;
+                  <div>
+                    <Heading as="h3" className="text-lg text-primary mb-3 font-semibold">Requirements</Heading>
+                    <Text as="p" className="text-sm text-gray-700 whitespace-pre-wrap">{formData.requirements}</Text>
+                  </div>
 
                   {/* Certifications */}
-                  {formData.certifications.length &gt; 0 && (
-                    &lt;div&gt;
-                      &lt;Heading as="h3" className="text-lg text-primary mb-3 font-semibold"&gt;Required Certifications&lt;/Heading&gt;
-                      &lt;div className="flex flex-wrap gap-2"&gt;
+                  {formData.certifications.length > 0 && (
+                    <div>
+                      <Heading as="h3" className="text-lg text-primary mb-3 font-semibold">Required Certifications</Heading>
+                      <div className="flex flex-wrap gap-2">
                         {formData.certifications.map(cert => (
-                          &lt;Text as="span" key={cert} className="bg-accent/10 text-accent px-2 py-1 rounded text-sm"&gt;
+                          <Text as="span" key={cert} className="bg-accent/10 text-accent px-2 py-1 rounded text-sm">
                             {cert}
-                          &lt;/Text&gt;
+                          </Text>
                         ))}
-                      &lt;/div&gt;
-                    &lt;/div&gt;
+                      </div>
+                    </div>
                   )}
-                &lt;/div&gt;
+                </div>
 
-                &lt;div className="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-lg"&gt;
-                  &lt;Heading as="h3" className="text-lg mb-2 font-semibold"&gt;What happens next?&lt;/Heading&gt;
-                  &lt;ul className="space-y-1 text-sm text-gray-200"&gt;
-                    &lt;li&gt;• We'll review your requirements within 2-4 hours&lt;/li&gt;
-                    &lt;li&gt;• Our engineering team will assess feasibility and develop pricing&lt;/li&gt;
-                    &lt;li&gt;• You'll receive a detailed quote within 24 hours&lt;/li&gt;
-                    &lt;li&gt;• We may contact you for clarification if needed&lt;/li&gt;
-                  &lt;/ul&gt;
-                &lt;/div&gt;
-              &lt;/motion.div&gt;
+                <div className="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-lg">
+                  <Heading as="h3" className="text-lg mb-2 font-semibold">What happens next?</Heading>
+                  <ul className="space-y-1 text-sm text-gray-200">
+                    <li>• We'll review your requirements within 2-4 hours</li>
+                    <li>• Our engineering team will assess feasibility and develop pricing</li>
+                    <li>• You'll receive a detailed quote within 24 hours</li>
+                    <li>• We may contact you for clarification if needed</li>
+                  </ul>
+                </div>
+              </motion.div>
             )}
 
             {/* Navigation Buttons */}
-            &lt;div className="flex justify-between pt-8 border-t border-gray-200"&gt;
-              &lt;Button
+            <div className="flex justify-between pt-8 border-t border-gray-200">
+              <Button
                 type="button"
                 onClick={prevStep}
                 disabled={currentStep === 1}
                 className={`bg-gray-200 text-gray-700 ${currentStep === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-300'}`}
                 iconName="ArrowLeft"
-              &gt;
+              >
                 Previous
-              &lt;/Button&gt;
+              </Button>
 
-              {currentStep &lt; 4 ? (
-                &lt;Button
+              {currentStep < 4 ? (
+                <Button
                   type="button"
                   onClick={nextStep}
                   className="cta-gradient text-white hover:scale-105"
                   iconName="ArrowRight"
-                &gt;
+                >
                   Next
-                &lt;/Button&gt;
+                </Button>
               ) : (
-                &lt;Button
+                <Button
                   type="submit"
                   isLoading={submitting}
                   className="cta-gradient text-white hover:scale-105"
                   iconName="Send"
-                &gt;
+                >
                   Submit Quote Request
-                &lt;/Button&gt;
+                </Button>
               )}
-            &lt;/div&gt;
-          &lt;/form&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
-    &lt;/&gt;
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
   );
 };
 

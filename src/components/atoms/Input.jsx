@@ -37,11 +37,11 @@ const Input = ({
         className={finalClassName}
         {...restProps}
       >
-        {placeholder && &lt;option value=""&gt;{placeholder}&lt;/option&gt;}
+{placeholder && <option value="">{placeholder}</option>}
         {options.map((option) => (
-          &lt;option key={option.value} value={option.value}&gt;
+          <option key={option.value} value={option.value}>
             {option.label}
-          &lt;/option&gt;
+          </option>
         ))}
       </select>
     );
