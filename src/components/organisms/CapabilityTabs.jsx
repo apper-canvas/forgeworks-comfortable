@@ -17,14 +17,14 @@ const CapabilityTabs = ({ capabilities }) => {
     { id: 'capacity', label: 'Capacity', icon: 'BarChart3' }
   ];
 
-  return (
-    &lt;&gt;
-      &lt;section className="py-8 bg-surface border-b border-gray-200 sticky top-16 z-30"&gt;
-        &lt;div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;
-          &lt;div className="flex justify-center"&gt;
-            &lt;div className="bg-white rounded-lg p-1 shadow-md flex"&gt;
+return (
+    <>
+      <section className="py-8 bg-surface border-b border-gray-200 sticky top-16 z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg p-1 shadow-md flex">
               {tabs.map((tab) => (
-                &lt;button
+                <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
@@ -32,28 +32,28 @@ const CapabilityTabs = ({ capabilities }) => {
                       ? 'bg-accent text-white shadow-md'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
-                &gt;
-                  &lt;ApperIcon name={tab.icon} className="w-4 h-4 mr-2" /&gt;
+                >
+                  <ApperIcon name={tab.icon} className="w-4 h-4 mr-2" />
                   {tab.label}
-                &lt;/button&gt;
+                </button>
               ))}
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
+            </div>
+          </div>
+        </div>
+      </section>
 
       {activeTab === 'equipment' && (
-        &lt;EquipmentSection equipmentData={capabilities.equipment} /&gt;
+        <EquipmentSection equipmentData={capabilities.equipment} />
       )}
 
       {activeTab === 'processes' && (
-        &lt;ProcessesSection processesData={capabilities.processes} /&gt;
+        <ProcessesSection processesData={capabilities.processes} />
       )}
 
       {activeTab === 'capacity' && (
-        &lt;CapacitySection capacityData={capabilities.capacity} /&gt;
+        <CapacitySection capacityData={capabilities.capacity} />
       )}
-    &lt;/&gt;
+    </>
   );
 };
 
