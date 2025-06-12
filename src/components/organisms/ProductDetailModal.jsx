@@ -9,10 +9,10 @@ import Button from '@/components/atoms/Button';
 const ProductDetailModal = ({ product, onClose }) => {
   const navigate = useNavigate();
 
-  const handleRequestQuote = () => {
+const handleRequestQuote = () => {
     onClose();
     // Navigate to quote page with product pre-selected
-    navigate(`/request-quote?product=${encodeURIComponent(product.name)}&productId=${product.id}`);
+    navigate(`/quote?product=${encodeURIComponent(product.name)}&productId=${product.id}`);
     toast.success('Redirecting to quote request...');
   };
 
