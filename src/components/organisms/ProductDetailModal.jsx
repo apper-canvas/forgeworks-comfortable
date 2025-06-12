@@ -1,10 +1,62 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import ApperIcon from '@/components/ApperIcon';
 import Heading from '@/components/atoms/Heading';
 import Text from '@/components/atoms/Text';
 import Button from '@/components/atoms/Button';
 
 const ProductDetailModal = ({ product, onClose }) => {
+  const navigate = useNavigate();
+
+  const handleRequestQuote = () => {
+    onClose();
+    // Navigate to quote page with product pre-selected
+    navigate(`/request-quote?product=${encodeURIComponent(product.name)}&productId=${product.id}`);
+    toast.success('Redirecting to quote request...');
+  };
+
+  const handleDownloadSpecs = async () => {
+    try {
+      // Create downloadable specification file
+      const specContent = `
+PRODUCT SPECIFICATIONS
+=====================
+
+Product: ${product.name}
+Category: ${product.category}
+${product.description}
+
+Key Features:
+${product.keyFeatures ? product.keyFeatures.map(feature => `• ${feature}`).join('\n') : '• Contact us for detailed specifications'}
+
+Applications:
+${product.applications ? product.applications.map(app => `• ${app}`).join('\n') : '• Various industrial applications'}
+
+For detailed technical specifications and custom requirements, 
+please contact our engineering team.
+
+ForgeWorks Pro Manufacturing
+Email: info@forgeworkspro.com
+Phone: (555) 123-4567
+`;
+
+      const blob = new Blob([specContent], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${product.name.replace(/\s+/g, '_')}_Specifications.txt`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      toast.success('Specifications downloaded successfully!');
+    } catch (error) {
+      console.error('Download error:', error);
+      toast.error('Failed to download specifications. Please try again.');
+    }
+  };
   if (!product) return null;
 
   return (
@@ -64,17 +116,17 @@ const ProductDetailModal = ({ product, onClose }) => {
               </div>
             )}
             
-            <div className="flex gap-3 pt-4">
+<div className="flex gap-3 pt-4">
               <Button 
-                onClick={() => {
-                  onClose();
-                  // navigate to quote page with product pre-selected - this logic would be in the parent page/container
-                }}
+                onClick={handleRequestQuote}
                 className="flex-1 cta-gradient text-white py-3"
               >
                 Request Quote
               </Button>
-              <Button className="flex-1 bg-gray-100 text-gray-700 py-3 hover:bg-gray-200">
+              <Button 
+                onClick={handleDownloadSpecs}
+                className="flex-1 bg-gray-100 text-gray-700 py-3 hover:bg-gray-200"
+              >
                 Download Specs
               </Button>
             </div>
