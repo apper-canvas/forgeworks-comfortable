@@ -49,6 +49,7 @@ const Layout = () => {
             </nav>
 
             {/* CTA Button */}
+{/* CTA Button */}
             <div className="hidden md:block">
               <NavLink
                 to="/quote"
@@ -58,10 +59,11 @@ const Layout = () => {
               </NavLink>
             </div>
 
-            {/* Mobile menu button */}
+            {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors"
+              aria-label="Toggle mobile menu"
             >
               <ApperIcon name={isMobileMenuOpen ? "X" : "Menu"} className="w-6 h-6" />
             </button>
@@ -70,13 +72,13 @@ const Layout = () => {
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isMobileMenuOpen && (
+{isMobileMenuOpen && (
             <>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/50 z-40"
+                className="fixed inset-0 bg-black bg-opacity-50 z-40"
                 onClick={toggleMobileMenu}
               />
               <motion.div

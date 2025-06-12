@@ -5,6 +5,7 @@ import ProductionCapabilitiesPage from '@/components/pages/ProductionCapabilitie
 import QualityStandardsPage from '@/components/pages/QualityStandardsPage';
 import ContactPage from '@/components/pages/ContactPage';
 import RequestQuotePage from '@/components/pages/RequestQuotePage';
+import IndustriesPage from '@/components/pages/IndustriesPage';
 import NotFoundPage from '@/components/pages/NotFoundPage';
 
 export const routes = {
@@ -12,43 +13,57 @@ export const routes = {
     id: 'home',
     label: 'Home',
     path: '/',
-    component: HomePage
+    component: HomePage,
+    icon: 'Home'
   },
   about: {
     id: 'about',
     label: 'About Us',
     path: '/about',
-    component: AboutPage
+    component: AboutPage,
+    icon: 'Info'
   },
   products: {
     id: 'products',
     label: 'Products',
     path: '/products',
-    component: ProductsPage
+    component: ProductsPage,
+    icon: 'Package'
+  },
+  industries: {
+    id: 'industries',
+    label: 'Industries',
+    path: '/industries',
+    component: IndustriesPage,
+    icon: 'Factory'
   },
   capabilities: {
     id: 'capabilities',
     label: 'Production Capabilities',
     path: '/capabilities',
-    component: ProductionCapabilitiesPage
+    component: ProductionCapabilitiesPage,
+    icon: 'Settings'
   },
   quality: {
     id: 'quality',
     label: 'Quality Standards',
     path: '/quality',
-    component: QualityStandardsPage
+    component: QualityStandardsPage,
+    icon: 'Award'
   },
   contact: {
     id: 'contact',
     label: 'Contact Us',
     path: '/contact',
-    component: ContactPage
+    component: ContactPage,
+    icon: 'Mail'
   },
   quote: {
     id: 'quote',
     label: 'Request Quote',
     path: '/quote',
-    component: RequestQuotePage
+    component: RequestQuotePage,
+    icon: 'FileText'
   },
   notFound: {
     id: 'notFound',
