@@ -1,58 +1,58 @@
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Products from '../pages/Products';
-import ProductionCapabilities from '../pages/ProductionCapabilities';
-import QualityStandards from '../pages/QualityStandards';
-import Contact from '../pages/Contact';
-import RequestQuote from '../pages/RequestQuote';
-import NotFound from '../pages/NotFound';
+import HomePage from '@/components/pages/HomePage';
+import AboutPage from '@/components/pages/AboutPage';
+import ProductsPage from '@/components/pages/ProductsPage';
+import ProductionCapabilitiesPage from '@/components/pages/ProductionCapabilitiesPage';
+import QualityStandardsPage from '@/components/pages/QualityStandardsPage';
+import ContactPage from '@/components/pages/ContactPage';
+import RequestQuotePage from '@/components/pages/RequestQuotePage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 export const routes = {
   home: {
     id: 'home',
     label: 'Home',
     path: '/',
-    component: Home
+    component: HomePage
   },
   about: {
     id: 'about',
     label: 'About Us',
     path: '/about',
-    component: About
+    component: AboutPage
   },
   products: {
     id: 'products',
     label: 'Products',
     path: '/products',
-    component: Products
+    component: ProductsPage
   },
   capabilities: {
     id: 'capabilities',
     label: 'Production Capabilities',
     path: '/capabilities',
-    component: ProductionCapabilities
+    component: ProductionCapabilitiesPage
   },
   quality: {
     id: 'quality',
     label: 'Quality Standards',
     path: '/quality',
-    component: QualityStandards
+    component: QualityStandardsPage
   },
   contact: {
     id: 'contact',
     label: 'Contact Us',
     path: '/contact',
-    component: Contact
+    component: ContactPage
   },
   quote: {
     id: 'quote',
     label: 'Request Quote',
     path: '/quote',
-    component: RequestQuote
+    component: RequestQuotePage
   },
   notFound: {
     id: 'notFound',
-    component: NotFound
+    component: NotFoundPage
   }
 };
 

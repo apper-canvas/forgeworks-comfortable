@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import ApperIcon from './ApperIcon';
+import ApperIcon from '@/components/ApperIcon';
+import Heading from '@/components/atoms/Heading';
+import Text from '@/components/atoms/Text';
 
 const MainFeature = () => {
   const capabilities = [
@@ -28,22 +30,23 @@ const MainFeature = () => {
     <section className="py-16 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-heading text-4xl md:text-5xl text-primary mb-4"
           >
-            Manufacturing Excellence
-          </motion.h2>
-          <motion.p 
+            <Heading as="h2" className="text-4xl md:text-5xl text-primary mb-4">
+              Manufacturing Excellence
+            </Heading>
+          </motion.div>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto"
           >
-            State-of-the-art equipment and decades of expertise combine to deliver 
+            State-of-the-art equipment and decades of expertise combine to deliver
             precision components that meet the most demanding specifications.
           </motion.p>
         </div>
@@ -63,20 +66,20 @@ const MainFeature = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
                   <ApperIcon name={capability.icon} className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-heading text-xl text-primary">
+                <Heading as="h3" className="text-xl text-primary">
                   {capability.title}
-                </h3>
+                </Heading>
               </div>
               
-              <p className="text-gray-600 mb-4">
+              <Text as="p" className="text-gray-600 mb-4">
                 {capability.description}
-              </p>
+              </Text>
               
               <ul className="space-y-2">
                 {capability.specs.map((spec, specIndex) => (
                   <li key={specIndex} className="flex items-center text-sm text-gray-500">
                     <ApperIcon name="Check" className="w-4 h-4 text-success mr-2" />
-                    {spec}
+                    <Text as="span">{spec}</Text>
                   </li>
                 ))}
               </ul>
@@ -84,7 +87,7 @@ const MainFeature = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
